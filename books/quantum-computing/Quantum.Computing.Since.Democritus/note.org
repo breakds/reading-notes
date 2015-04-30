@@ -7,3 +7,20 @@
 + Pull down automata is another example of this idea.
 
 
+* Notes
+** Page 48, Prove that there are problems that can be solved in O(n^3) but not O(n^2).
+*** The constructed problem is deciding whether a program finishes in n^2.5 steps.
+*** Firstable, the naive impletmentation is O(n^2.5) by simulating the input program.
++ This is definitely O(n^3).
+*** An underlying assumption is that if we can solve a problem in O(^2), we can write a Turing compatible program to implement it.
++ call this program P, note we assume P runs in O(n^2).
+*** Construct P', which uses P
++ if P(Q), run forever
++ else stop
++ Note: Q is the input program, P(Q) means Q stops before reaching n^2.5 steps.
+*** Feed P' to P':
++ If P' finishes in n^2.5 steps, P(P') = true, it runs forever -> contradiction
++ If P' does not finish in n^2/5 steps, then it stops. The problem is
+  that P(P') only takes O(n^2) steps. Given large n, it is clearly
+  that O(n^2) < n^2.5, which is a contradiction
+
