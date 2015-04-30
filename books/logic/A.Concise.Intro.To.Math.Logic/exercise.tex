@@ -1,0 +1,83 @@
+\documentclass[a4paper, 12pt]{article}
+\title{Exercise: A Concise Introduction to Mathematical Logic}
+\author{BreakDS}
+\date{}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+
+\begin{document}
+\maketitle
+
+\section{Propositional Loigc}
+\subsection{Boolean Function and Formulas}
+\subsection{}
+\subsection{}
+\subsection{A Calculus of Natural Deduction}
+\begin{enumerate}
+\item The proof should be straight forward: By Theorem 4.1, The in
+  consistency of $X \cup \{ \neg \alpha | \alpha \in Y\}$ has a finite
+  subset $H$ that is inconsistent, namely $H \vdash \bot$. We can
+  write $H$ as 
+  \[
+  H =  \neg \alpha_0 \cup \neg \alpha_1 \cup \neg \alpha_2 \cdots \neg \alpha_n \cup X_0
+  \]
+  Where $\alpha_0, \alpha_1, \cdots, \alpha_n \in Y$, and $X_0$ is a
+  finite subset of $X$. This is achievable because $H$ is finite.
+
+  
+  There are two cases, depending on whether $n = 0$.
+
+
+  \begin{itemize}
+  \item[\textbf{Case 1}] $n = 0$. This means that $X_0 \vdash \bot$,
+    which means that $X_0$ is inconsistent, and by the definition of
+    inconsistency $X_0 \vdash$ everything, including an arbitray
+    $\alpha_0$ in $Y$. Proved.
+
+  \item[\textbf{Case 2}] $n > 0$. Thie means:
+    \[
+    X_0 , \neg \alpha_0 , \neg \alpha_1 , \neg \alpha_2 \cdots \neg \alpha_n
+    \vdash \bot
+    \]
+    Which by Lemma 4.2 shows 
+    \[
+    X_0 , \neg \alpha_0 , \neg \alpha_1 , \neg \alpha_2 \cdots \neg \alpha_{n-1}
+    \vdash \alpha_n
+    \]
+    Which by $\rightarrow$-introduction shows 
+    \[
+    X_0 , \neg \alpha_0 , \neg \alpha_1 , \neg \alpha_2 \cdots \neg \alpha_{n-2}
+    \vdash \neg \alpha_{n-1} \rightarrow \alpha_n
+    \]
+    And by definition of $\rightarrow$, we have 
+    \[
+    X_0 , \neg \alpha_0 , \neg \alpha_1 , \neg \alpha_2 \cdots \neg \alpha_{n-2}
+    \vdash \neg(\neg \alpha_{n-1} \wedge \neg \alpha_n)
+    \]
+    Namely
+    And by definition of $\rightarrow$, we have 
+    \[
+    X_0 , \neg \alpha_0 , \neg \alpha_1 , \neg \alpha_2 \cdots \neg \alpha_{n-2}
+    \vdash \alpha_{n-1} \vee \alpha_n
+    \]
+    Repeat the above deduction, we get
+    \[
+    X_0 \vdash \alpha_0 \vee \cdots \vee \alpha_{n-1} \vee \alpha_n
+    \]
+    And by basic rules of $\vdash$, since $X_0 \subseteq X$, $X$ does
+    that as well.
+
+  \end{itemize}
+
+
+  
+  
+\end{enumerate}
+
+
+
+\end{document}

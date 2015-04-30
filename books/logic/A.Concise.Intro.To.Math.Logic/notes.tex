@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt]{article}
+\title{Notes: A Concise Introduction to Mathematical Logic}
+\author{BreakDS}
+\date{}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+
+\begin{document}
+\maketitle
+
+\section{Propositional Loigc}
+\subsection{Boolean Function and Formulas}
+\begin{enumerate}
+\item There are some useful definitions.
+  \begin{itemize}
+  \item There are strings called \textbf{atomic} strings, which cannot
+    be divided further in this \textbf{formal language}. They are also
+    called \textbf{prime}s.
+  \item \textbf{prime}s are usually represented by $p$.
+  \end{itemize}
+\end{enumerate}
+\subsection{}
+\subsection{}
+\subsection{A Calculus of Natural Deduction}
+\begin{enumerate}
+\item[4.2] Note: A not-so-obvious conclusion is that $X \not \vdash
+  \alpha \Rightarrow X, \neg \alpha \not \vdash \bot$. It seems a
+  little bit counter-intuitive but it should reads:
+
+
+  If $X \not \vdash \alpha$, then of course $X \not \vdash \text{
+    everything}$, therefore by definition, $X$ must be
+  consistent. However, we can actually get more: even $X, \neg \alpha$
+  is consistent.
+
+  
+\item[4.3] Lindenbaum's Theorem (a.k.a Compactness)
+\item[4.5] This lemma should read as - A maximally consistent set X is
+  \textbf{yet still} satisfiable. The idea behind this proof is that
+  we would like to prove statisfiability $\Leftrightarrow$
+  consistency, and to be sepcific consistency $\Rightarrow$
+  satisfiability. In order to prove that, we prove a stricter version
+  of the statementm, which is maximally consistency $\Rightarrow$
+  satisfiability.
+
+  Some notes on the proof:
+  \begin{itemize}
+  \item Define a valuation $\omega$, so that $\omega \models p,
+    \forall \text{ prime } p \in X$, and $\omega \not \models p,
+    \forall \text{ prime } p \not \in X$.
+  \item Note that $\alpha \in X$ is equivalent to $X \vdash \alpha$,
+    if $X$ is maximally satisfiable.
+  \item Try to prove that $\forall \alpha \in X, \omega \models \alpha$.
+  \end{itemize}
+
+\item[4.6] Proof of this theorem should be quite straight forward and
+  the key is that 
+
+  
+\end{enumerate}
+
+\subsection{Application of the Compactness Theorem}
+
+First, some notes:
+\begin{itemize}
+\item The Compactness Theorem is crucial here as it extends proof of
+  some finite sets to an (potentially) infinite set.
+\item That means to form those proofs, we often need to prove the
+  finite set cases first.
+\item And inorder to apply the Compactness Theorem, we need to write
+  binary variable (or, propositional variable) form equations
+  (formulas) that needs to be true.
+\item That is why we would like to use the Compactness Theorem of
+  $\models$ rather than $\vdash$. We need \textbf{valuation}.
+\end{itemize}
+
+
+\end{document}

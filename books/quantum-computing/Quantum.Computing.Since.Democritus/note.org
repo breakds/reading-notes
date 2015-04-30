@@ -1,0 +1,9 @@
+* Inspirations
+** Why "countable" is such an important concept in Maths?
+*** Our brain are weak when dealing with infinity
+*** But we can easily turn "countable" into finite things!
++ Induction is common in proof. It actually converts infinite proofs into finte ones.
++ Compactness of propositional logic is also converting infinity to finite stuff.
++ Pull down automata is another example of this idea.
+
+
